@@ -1,0 +1,63 @@
+<div class="bg">
+    <video #bgVideo class="bg__video" autoplay muted loop playsinline preload="auto">
+        <source src="bg.mp4" type="video/mp4" />
+    </video>
+    <div class="bg__overlay"></div>
+</div>
+
+<main class="content">
+    <section class="card">
+        <header class="card__header">
+            <p class="card__eyebrow">Tu panel diario</p>
+            <h1>Home</h1>
+            <p class="card__subtitle">Comienza donde lo dejaste. Todo está sincronizado y listo.</p>
+        </header>
+
+        <div class="search" aria-label="Buscar en Google">
+            <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M11 4a7 7 0 0 1 5.478 11.269l4.126 4.127a1 1 0 0 1-1.414 1.414l-4.127-4.126A7 7 0 1 1 11 4zm0 2a5 5 0 1 0 3.535 8.536A5 5 0 0 0 11 6z" />
+            </svg>
+            <input class="search__field" type="text" placeholder="Buscar en la web…" (keydown.enter)="search(searchBox.value)"
+                #searchBox autofocus />
+            <button type="button" class="search__action" (click)="search(searchBox.value)">Buscar</button>
+        </div>
+
+        <div class="chips" aria-label="Accesos rápidos">
+            <a class="chip" href="https://github.com" target="_blank" rel="noopener">
+                <img src="luigi-culon.png" alt="" loading="lazy" />
+                <span>GitHub</span>
+            </a>
+            <a class="chip" href="https://calendar.google.com" target="_blank" rel="noopener">
+                <img src="actualidad_6259676_128653661_639x349-removebg-preview(1).png" alt="" loading="lazy" />
+                <span>Calendar</span>
+            </a>
+            <a class="chip" href="https://chat.openai.com" target="_blank" rel="noopener">
+                <img src="psy-psy.png" alt="" loading="lazy" />
+                <span>ChatGPT</span>
+            </a>
+            <a class="chip" href="https://mail.google.com" target="_blank" rel="noopener">
+                <img src="purepng.com-spiderman-comicspider-manspidermansuperherocomic-bookmarvel-comicscharacterstan-leegamesmovie-1701528656355vmasf(1).png" alt="" loading="lazy" />
+                <span>Gmail</span>
+            </a>
+            <a class="chip" href="https://www.linkedin.com" target="_blank" rel="noopener">
+                <img src="smoking-tux-penguin-1-removebg-preview(1).png" alt="" loading="lazy" />
+                <span>LinkedIn</span>
+            </a>
+            <a class="chip" href="https://web.whatsapp.com" target="_blank" rel="noopener">
+                <img src="megakill.png" alt="" loading="lazy" />
+                <span>WhatsApp</span>
+            </a>
+            <a class="chip" href="about:debugging#/runtime/this-firefox" target="_blank" rel="noopener">
+                <img src="fire.png" alt="" loading="lazy" />
+                <span>Debug</span>
+            </a>
+        </div>
+
+        <footer class="card__footer">
+            <span>Consejo</span>
+            <p>Presiona <kbd>Ctrl</kbd> + <kbd>L</kbd> para saltar al buscador de la barra de dirección.</p>
+        </footer>
+    </section>
+    <img class="hero-banner" src="lateral.png" alt="" aria-hidden="true" loading="lazy" />
+</main>
