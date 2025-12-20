@@ -1,0 +1,223 @@
+:host {
+    display: block;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #f8fafc;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+}
+
+.bg__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg__overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 55%),
+        rgba(9, 10, 18, 0.75);
+    z-index: -1;
+}
+
+.content {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+.card {
+    width: min(640px, 100%);
+    background: rgba(15, 16, 30, 0.55);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    animation: floatIn 600ms ease-out;
+}
+
+.card__header {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card__eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #cbd5f5;
+    margin: 0;
+}
+
+.card__header h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    margin: 0;
+    color: #fff;
+}
+
+.card__subtitle {
+    margin: 0;
+    color: rgba(226, 232, 255, 0.85);
+    font-size: 1rem;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.35rem 0.25rem 0.75rem;
+    background: rgba(8, 9, 21, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.search__icon {
+    width: 24px;
+    height: 24px;
+    fill: rgba(255, 255, 255, 0.65);
+}
+
+.search__field {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 0;
+    outline: none;
+}
+
+.search__field::placeholder {
+    color: rgba(226, 232, 255, 0.6);
+}
+
+.search__action {
+    border: none;
+    border-radius: 999px;
+    padding: 0.55rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #05060b;
+    background: linear-gradient(120deg, #fce68e, #f8a6ff, #78a6ff);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search__action:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(248, 166, 255, 0.4);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.chip {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e2e8ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.chip:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.stat {
+    padding: 1rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat__label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.stat__value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+.card__footer {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: rgba(226, 232, 255, 0.75);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1rem;
+}
+
+.card__footer span {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: rgba(248, 230, 142, 0.9);
+}
+
+kbd {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+    font-size: 0.8rem;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 1.75rem;
+    }
+
+    .search {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .search__action {
+        grid-column: span 2;
+        width: 100%;
+    }
+}

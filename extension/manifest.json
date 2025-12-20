@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "Angular Video New Tab",
+    "version": "1.0.0",
+    "description": "Nueva pestaña con Angular y vídeo de fondo",
+    "chrome_url_overrides": {
+        "newtab": "newtab/index.html"
+    },
+    "permissions": [],
+    "web_accessible_resources": [
+        "newtab/*"
+    ]
+}
