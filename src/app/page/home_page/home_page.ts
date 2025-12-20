@@ -26,7 +26,7 @@ export class HomePageComponent implements AfterViewInit {
     @HostListener('window:pageshow', ['$event'])
     handlePageShow(event: PageTransitionEvent) {
         if (event.persisted) {
-            this.restartVideo();
+            window.location.reload();
         }
     }
 
