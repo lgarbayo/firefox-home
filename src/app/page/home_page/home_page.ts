@@ -30,6 +30,11 @@ export class HomePageComponent implements AfterViewInit {
         }
     }
 
+    @HostListener('window:unload')
+    handleUnload() {
+        // prevent bfcache so video restarts on navigation
+    }
+
     @HostListener('document:paste', ['$event'])
     handlePaste(event: ClipboardEvent) {
         const text = event.clipboardData?.getData('text') ?? '';
