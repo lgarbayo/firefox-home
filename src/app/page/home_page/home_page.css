@@ -12,17 +12,20 @@
     z-index: -2;
 }
 
-.bg__video {
+.bg__animation {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
+    pointer-events: none;
 }
 
 .bg__overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 40%),
-        rgba(3, 4, 6, 0.85);
+    background: radial-gradient(circle at 25% 25%, rgba(120, 125, 145, 0.15), transparent 45%),
+        rgba(3, 4, 6, 0.9);
     z-index: -1;
 }
 
@@ -64,11 +67,11 @@
     align-items: center;
 }
 
-.card__eyebrow {
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
-    color: #cbd5f5;
-    margin: 0;
+.card__badge {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
 }
 
 .card__header h1 {

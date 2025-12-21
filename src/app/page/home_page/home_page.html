@@ -1,15 +1,13 @@
 <div class="bg">
-    <video #bgVideo class="bg__video" autoplay muted loop playsinline preload="auto">
-        <source src="bg.mp4" type="video/mp4" />
-    </video>
+    <canvas #bgCanvas class="bg__animation"></canvas>
     <div class="bg__overlay"></div>
 </div>
 
 <main class="content">
     <section class="card">
         <header class="card__header">
-            <p class="card__eyebrow">my dashboard</p>
-            <h1>home page</h1>
+            <img class="card__badge" src="luigi-culon.png" alt="" loading="lazy" />
+            <h1>hello world</h1>
         </header>
 
         <div class="search" aria-label="Buscar en Google">
@@ -17,7 +15,7 @@
                 <path
                     d="M11 4a7 7 0 0 1 5.478 11.269l4.126 4.127a1 1 0 0 1-1.414 1.414l-4.127-4.126A7 7 0 1 1 11 4zm0 2a5 5 0 1 0 3.535 8.536A5 5 0 0 0 11 6z" />
             </svg>
-            <input class="search__field" type="text" placeholder="Buscar en la web…" (keydown.enter)="search(searchBox.value)"
+            <input class="search__field" type="text" placeholder="search search search search search search search" (keydown.enter)="search(searchBox.value)"
                 #searchBox autofocus />
             <button type="button" class="search__action" (click)="search(searchBox.value)">search</button>
         </div>
@@ -39,7 +37,7 @@
                 <img src="luigi-culon.png" alt="" loading="lazy" />
                 <span>GMAIL</span>
             </a>
-            <a class="chip" href="https://www.linkedin.com" target="_blank" rel="noopener">
+            <a class="chip" href="https://www.linkedin.com/in/luis-garbayo/" target="_blank" rel="noopener">
                 <img src="luigi-culon.png" alt="" loading="lazy" />
                 <span>LINKEDIN</span>
             </a>
