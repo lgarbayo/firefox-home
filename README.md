@@ -1,61 +1,114 @@
-# FirefoxHome
+# firefox-home 🦊✨
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Custom **Firefox Homepage / New Tab** built with **Angular**, designed to be used as the frontend of a **Firefox WebExtension**.
 
 <img width="2560" height="1440" alt="imagen" src="https://github.com/user-attachments/assets/f15f0d40-02f9-489e-a0d0-8fe8bd9c8c45" />
 
-## Development server
+This repository contains the **complete Angular source code** of the application rendered as the Firefox New Tab.  
+The project is open source and intentionally documented so developers can easily navigate and understand the codebase.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🎯 Project Goals
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Replace Firefox’s **New Tab** with a custom homepage
+- Use **Angular** as the main frontend framework
+- Provide a clear and explicit structure for contributors
+- Serve as an educational and experimental project
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧱 Project Structure
 
-```bash
-ng generate component component-name
-```
+The following tree represents the **actual structure of the repository**, included so developers know exactly where to navigate:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+.
+├── app
+│   ├── app.config.server.ts     # Angular server-side configuration
+│   ├── app.config.ts            # Global application configuration
+│   ├── app.css                  # Root component styles
+│   ├── app.html                 # Root component template
+│   ├── app.routes.server.ts     # Server-side routing
+│   ├── app.spec.ts              # Root component tests
+│   ├── app.ts                   # Root Angular component
+│   └── page
+│       └── home_page             # Main page (Firefox New Tab)
+│           ├── home_page.css
+│           ├── home_page.html
+│           └── home_page.ts
+├── index.html                    # Base HTML document
+├── main.server.ts                # Angular SSR entry point
+├── main.ts                       # Angular client bootstrap
+├── server.ts                     # Node.js server (SSR support)
+└── styles.css                    # Global styles
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🧭 Code Navigation Guide
 
-To build the project run:
+- **app/**  
+  Core Angular application logic.
 
-```bash
-ng build
-```
+- **app/page/home_page/**  
+  Main page rendered as the Firefox homepage / new tab.  
+  Most UI and functional changes will happen here.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **main.ts**  
+  Client-side Angular bootstrap.
 
-## Running unit tests
+- **main.server.ts & server.ts**  
+  Server-side rendering (SSR) support.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- **index.html**  
+  Base HTML container used by Angular.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🛠️ Technologies Used
 
-For end-to-end (e2e) testing, run:
+- Angular (standalone + SSR)
+- TypeScript
+- HTML5 / CSS3
+- Node.js
+- Firefox WebExtensions API
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🚀 Development & Setup
 
-## Additional Resources
+Install dependencies:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+npm install
+
+Build the project to generate `dist/` folder:
+
+npm run build
+
+Run the project in development mode:
+
+npm run start
+
+This starts the Angular development environment for local testing.
+
+---
+
+## 📦 Usage as Firefox New Tab
+
+This application is intended to be **built and used as the content of a Firefox extension**.
+
+Typical workflow:
+
+1. Build the Angular application
+2. Use the generated `dist/` output as the New Tab content
+3. Load the extension manually via `about:debugging` in Firefox
+
+(The WebExtension wrapper can live in a separate folder or repository.)
+
+---
+
+## 🧠 Project Philosophy
+
+- Explicit structure over hidden conventions
+- Learn Firefox customization by doing
+- Code meant to be read, explored, and extended
+- Open source as a learning tool
