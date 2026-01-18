@@ -9,7 +9,7 @@ The project is open source and intentionally documented so developers can easily
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Replace Firefox’s **New Tab** with a custom homepage
 - Use **Angular** as the main frontend framework
@@ -18,7 +18,7 @@ The project is open source and intentionally documented so developers can easily
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 The following tree represents the **actual structure of the repository**, included so developers know exactly where to navigate:
 
@@ -44,7 +44,7 @@ The following tree represents the **actual structure of the repository**, includ
 
 ---
 
-## 🧭 Code Navigation Guide
+## Code Navigation Guide
 
 - **app/**  
   Core Angular application logic.
@@ -64,7 +64,7 @@ The following tree represents the **actual structure of the repository**, includ
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Angular (standalone + SSR)
 - TypeScript
@@ -74,7 +74,7 @@ The following tree represents the **actual structure of the repository**, includ
 
 ---
 
-## 🚀 Development & Setup
+## Development & Setup
 
 Install dependencies:
 
@@ -92,7 +92,7 @@ This starts the Angular development environment for local testing.
 
 ---
 
-## 📦 Usage as Firefox New Tab
+## Usage as Firefox New Tab
 
 This application is intended to be **built and used as the content of a Firefox extension**.
 
@@ -106,7 +106,7 @@ Typical workflow:
 
 ---
 
-## 🧠 Project Philosophy
+## Project Philosophy
 
 - Explicit structure over hidden conventions
 - Learn Firefox customization by doing
@@ -115,7 +115,7 @@ Typical workflow:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License**.  
 See the [LICENSE.md](./LICENSE.md) file for details.
