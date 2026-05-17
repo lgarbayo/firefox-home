@@ -2,7 +2,7 @@
 
 Custom **Firefox Homepage / New Tab** built with **Angular**, designed to be used as the frontend of a **Firefox WebExtension**.
 
-<img width="2300" height="1338" alt="Image" src="https://github.com/user-attachments/assets/54b2f78a-4ea2-4d3e-976f-591c8d63c84e" />
+<img width="2300" height="1338" alt="Image" src="https://github.com/user-attachments/assets/2ef94211-26bb-48b9-bfdd-c9a77720e8b2" />
 
 This repository contains the **complete Angular source code** of the application rendered as the Firefox New Tab.  
 The project is open source and intentionally documented so developers can easily navigate and understand the codebase.
