@@ -21,6 +21,7 @@ The project is open source and intentionally documented so developers can easily
 
 The following tree represents the **actual structure of the repository**, included so developers know exactly where to navigate:
 
+```text
 .
 ├── app
 │   ├── app.config.server.ts     # Angular server-side configuration
@@ -40,6 +41,7 @@ The following tree represents the **actual structure of the repository**, includ
 ├── main.ts                       # Angular client bootstrap
 ├── server.ts                     # Node.js server (SSR support)
 └── styles.css                    # Global styles
+```
 
 ---
 
